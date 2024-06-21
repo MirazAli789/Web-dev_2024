@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option</title>
+    <style>
+        option,select,input:hover{
+            cursor:pointer;
+
+        }
+        body{
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-size: 19px;
+        }
+        select,input{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size:20px;
+            background-color: lightpink;
+        }
+        #sub{
+            background-color: lightgreen;
+        }
+        #sub:hover{
+            background-color: aliceblue;
+        }
+        #sl:hover{
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <h2><label for="sl">Select your dream company</label></h2>
+        <select id="sl" required autofocus>
+            <option value="se" disabled selected>select company</option>
+            <option value="G" label="Google">G</option>
+            <option value="A">Amazon</option>
+            <option value="M">Microsoft</option>
+            <option value="AP">Apple</option>
+            <option value="N">Netflix</option>
+            <option value="M">Meta</option>
+            <option value="T">TCS</option>
+            <option value="W">Wipro</option>
+            <option value="C">Cognizant</option>
+            <option value="I">Infosys</option>
+            <option value="S">Salesforce</option>
+        </select>
+        <input type="submit" value="Submit" id="sub">
+    </form>
+</body>
+</html>

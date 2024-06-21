@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendant selector</title>
+    <style>
+        /* targets the paragraph within the div */
+        div p{
+            font-size: 25px;
+            color: red;
+        }
+        section h1{
+            color: blue;
+        }
+        section h1 span{
+            color: crimson;
+        }
+        #tit{
+            background-color: beige;
+            text-decoration: underline dotted;
+            border: 3px solid gray;
+            padding: 5px;
+            text-align: center;
+        }
+        #tit div{
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="tit">Descendant selector <div>this is a div</div></h1>
+    <div>
+        <p>Hello world,I am a programmer and I need help</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat cumque, sed ducimus repudiandae assumenda provident! Sed nihil cupiditate temporibus ipsum. Soluta architecto modi mollitia tenetur praesentium, dignissimos atque! Recusandae?</p>
+    <section>
+        <h1>this is a header <span>this is span</span></h1>
+    </section>
+    <h1>header</h1>
+</body>
+</html>

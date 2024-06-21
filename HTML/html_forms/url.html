@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type = "url</title>
+    <style>
+        #sub{
+            border: 2px solid black;
+            border-radius: 15px;
+            display: block;
+            padding: 10px;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        #sub:hover{
+            
+            cursor: pointer;
+            background-color: pink;
+            padding: 50px;
+            font-size: 100px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* text-transform: uppercase; */
+            text-decoration: dashed;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <label for="ur">Enter URL : </label>
+        <input type="url" name="ur" id="ur" required placeholder="https://cornhub.com">
+        <input type="submit" value="Go" id="sub">
+    </form>
+</body>
+</html>

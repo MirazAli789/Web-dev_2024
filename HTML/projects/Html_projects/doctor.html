@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1f1f1f;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #363636;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 90%;
+            margin: auto;
+        }
+
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #555;
+            color: #fff;
+        }
+
+        #sub {
+            width: 100%;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #sub:hover {
+            background-color: #45a049;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #bbb;
+        }
+
+        :-moz-placeholder {
+            color: #bbb;
+        }
+
+        ::-moz-placeholder {
+            color: #bbb;
+        }
+
+        :-ms-input-placeholder {
+            color: #bbb;
+        }
+
+        #message {
+            display: none;
+            text-align: center;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            form {
+                width: 70%;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            form {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form id="appointmentForm" action="backend.php" onsubmit="return submitForm()">
+        <h2>Dr. Soumyadip Bar</h2>
+        <marquee behavior="" direction="left">MBBS, MD (cal), Cardiac specialist, gold medalist</marquee>
+        <h3>Appointment Form</h3>
+        <h3>Enter the following details</h3>
+        <label for="nm">Enter Name:</label>
+        <input type="text" id="nm" required>
+        <label for="age">Enter Age:</label>
+        <input type="number" id="age" min="5" max="90" required>
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <label for="numb">Enter phone number:</label>
+        <input type="tel" id="numb" required minlength="10" maxlength="10" placeholder="e.g., 1234567890">
+        <label for="em">Enter Email ID:</label>
+        <input type="email" id="em" required placeholder="abc@example.com">
+        <h4>Enter date of Appointment (Only Thursdays and Fridays)</h4>
+        <label for="dt">Enter Date:</label>
+        <input type="date" id="dt" required>
+        <label for="word">Few words about the disease (optional):</label>
+        <textarea id="word" rows="4" placeholder="Any kind of physical or mental disorder"></textarea>
+        <input type="submit" id="sub" value="Submit">
+    </form>
+
+    <div id="message">Your appointment has been submitted</div>
+
+    <script>
+        function submitForm() {
+            document.getElementById('message').style.display = 'block';
+            return false; // Prevents the form from submitting
+        }
+    </script>
+</body>
+
+</html>
